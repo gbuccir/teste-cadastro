@@ -1,0 +1,72 @@
+$floatLeft: left !default;
+$floatRight: right !default;
+$displayF: flex;
+$verdePadrao: '';
+$verdeIcon: '';
+
+.fundoInterrogacao{
+height: 40px;
+width: 40px;
+background-color: green;
+text-align: center;
+float: $floatLeft;
+}
+
+header{
+    height: 50px;
+}
+
+header h3{
+    float: $floatLeft;
+}
+
+header > div:last-of-type{
+    float: $floatRight;
+}
+
+.alinhaCentro{
+    display: $displayF;
+justify-content: center;
+flex-direction: column;
+}
+
+.alinhaEsquerda{
+    display: $displayF;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.headerDireita{
+    float: right;
+}
+
+.headerEsquerda{
+    float: left;
+}
+
+.subHeader{
+height: 40px;
+background-color: grey;;
+}
+
+.Sports{
+width: 100%;
+height: 100px;
+background-color: green;
+}
+
+.Sports > .infoSports{
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin: 10px;
+}
+
+.infoSports *:not(:first-child){
+    float: $floatRight;
+}
+
+.infoSports :first-child{
+float :left;
+}

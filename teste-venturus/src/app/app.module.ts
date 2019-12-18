@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UsersComponent } from './users/users.component';
 import { RegistrationComponent } from './users/registration/registration.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { RegistrationComponent } from './users/registration/registration.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,3 +23,21 @@
     .infoSports :first-child{
     float :left;
     }
+
+    .usersHeader h3 {
+float: left;
+    }
+
+    .usersHeader > hr{
+        float: left;
+width:calc(100% - 260px);
+margin: 20px;
+    }
+
+    .usersHeader input {
+        float: right;
+            }
+
+    .usersTable{
+
+    }

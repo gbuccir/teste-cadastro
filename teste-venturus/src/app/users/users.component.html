@@ -1,4 +1,3 @@
-
 <section class="subHeader alinhaEsquerda">
   <fa-icon [icon]="faHome" class="alinhaCentro"></fa-icon>
   <!-- rota -->
@@ -6,18 +5,56 @@
 <section class="Sports">
   <div class="infoSports">
     <fa-icon [icon]="faPuzzlePiece"></fa-icon>
-      <span>Sport Type</span>
-      <p>Cycling</p>
+    <span>Sport Type</span>
+    <p>Cycling</p>
   </div>
   <div class="infoSports">
     <fa-icon [icon]="faTrophy"></fa-icon>
     <span>Mode</span>
     <p>Advanced</p>
-</div>
-<div class="infoSports">
-  <fa-icon [icon]="faMapSigns"></fa-icon>
-  <span>Route</span>
-  <p>30 miles</p>
-</div>
+  </div>
+  <div class="infoSports">
+    <fa-icon [icon]="faMapSigns"></fa-icon>
+    <span>Route</span>
+    <p>30 miles</p>
+  </div>
 </section>
+
+<section>
+  <div class="usersHeader">
+    <h3>Users</h3>
+    <hr>
+    <input type="search" placeholder="Filter table content" />
+  </div>
+
+  <div class="usersTable">
+    <table style="width:100%">
+      <tr>
+        <th>Username</th>
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>City</th>
+        <th>Ride in group</th>
+        <th>Day of the week</th>
+        <th>Post</th>
+        <th>Albums</th>
+        <th>Photos</th>
+      </tr>
+      <tr *ngFor="let user of users; ">
+        <td>{{user.username}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.city}}</td>
+        <td>Jackson</td>
+        <td>94</td>
+        <td>{{this.users.posts.length}}</td>
+        <td>{{this.users.albuns.length}}</td>
+        <td>{{this.users.photos.length}}</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+
+
 <router-outlet></router-outlet>

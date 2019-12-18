@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faLifeRing , faHeartbeat, faSmile } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-registration',
@@ -8,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class RegistrationComponent implements OnInit {
 
   constructor() { }
+
+  faLifeRing=faLifeRing;
+  faHeartbeat=faHeartbeat;
+   faSmile=faSmile;
 
   ngOnInit() {
   }

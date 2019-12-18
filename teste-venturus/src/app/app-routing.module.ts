@@ -7,12 +7,16 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersComponent,
-    children: [
-      {
-        path: 'new',
-        component: RegistrationComponent
-      },
-    ]
+    // children: [
+    //   {
+    //     path: 'new',
+    //     component: RegistrationComponent
+    //   },
+    // ]
+  },
+  {
+    path: 'users/new',
+    component: RegistrationComponent
   },
   {
     path: '',

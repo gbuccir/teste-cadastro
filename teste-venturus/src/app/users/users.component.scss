@@ -52,11 +52,16 @@ margin: 20px;
     font-size: 12px;
 }
 
+tr:nth-child(odd):not(:first-of-type){
+    background-color: #eaeaea;
+}
+
 td.tdLixeira{
     visibility: hidden;
 }
 tr:hover > .tdLixeira{
     visibility: visible;
+    cursor: pointer;
 }
 
     // .pesquisa

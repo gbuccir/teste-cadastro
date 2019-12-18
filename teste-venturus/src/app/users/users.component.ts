@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
   public photos;
   public posts;
   public pesquisa;
-private usersAux;
+  private usersAux;
 
   ngOnInit() {
     this.buscarPosts();
@@ -32,12 +32,12 @@ private usersAux;
   }
 
   filterFunction() {
-    console.log(this.users);
-    console.log(this.pesquisa);
+
+
     if (this.pesquisa !== '')
       this.users = this.users.filter(i => i.name.includes(this.pesquisa) || i.username.includes(this.pesquisa));
-else 
-this.users = this.usersAux;
+    else
+      this.users = this.usersAux;
   }
 
 
@@ -50,14 +50,14 @@ this.users = this.usersAux;
 
       this.users.forEach(element => {
 
-        this.users.posts = this.posts.filter(post => post.userId == element.id);
-        this.users.albuns = this.albuns.filter(albun => albun.userId == element.id);
+        element.posts = this.posts.filter(post => post.userId == element.id);
+        element.albuns = this.albuns.filter(albun => albun.userId == element.id);
 
         this.albuns.forEach(alb => {
-          this.users.photos = this.photos.filter(photo => photo.albumId == alb.id);
+          element.photos = this.photos.filter(photo => photo.albumId == alb.id);
         });
       });
-
+console.log(this.users);
     },
       err => {
         console.log(err);

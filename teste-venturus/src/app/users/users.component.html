@@ -24,7 +24,7 @@
   <div class="usersHeader">
     <h3>Users</h3>
     <hr>
-    <input type="text" [(ngModel)]="this.pesquisa" (ngModelChange)="filterFunction()" placeholder="&#128269; Filter table content" />
+    <input type="text" [(ngModel)]="this.pesquisa" (ngModelChange)="filterFunction()" class="pesquisa" placeholder="&#9906; Filter table content" />
   </div>
 
   <div class="usersTable">
@@ -47,9 +47,9 @@
         <td>{{user.address.city}}</td>
         <td>Jackson</td>
         <td>94</td>
-        <td>{{this.users.posts.length}}</td>
-        <td>{{this.users.albuns.length}}</td>
-        <td>{{this.users.photos.length}}</td>
+        <td>{{user.posts.length}}</td>
+        <td>{{user.albuns.length}}</td>
+        <td>{{user.photos.length}}</td>
       </tr>
     </table>
   </div>

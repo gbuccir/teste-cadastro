@@ -39,6 +39,7 @@
         <th>Post</th>
         <th>Albums</th>
         <th>Photos</th>
+        <th>&nbsp;</th>
       </tr>
       <tr *ngFor="let user of users">
         <td>{{user.username}}</td>
@@ -50,8 +51,38 @@
         <td>{{user.posts.length}}</td>
         <td>{{user.albuns.length}}</td>
         <td>{{user.photos.length}}</td>
+        <td class="tdLixeira" (click)="removerElemento(user)">lixeira</td>
       </tr>
     </table>
+
+    <!-- <ul style="width:100%">
+      <li>
+        <p>Username</p>
+        <p>Name</p>
+        <p>E-mail</p>
+        <p>City</p>
+        <p>Ride in group</p>
+        <p>Day of the week</p>
+        <p>Post</p>
+        <p>Albums</p>
+        <p>Photos</p>
+      </li>
+      <li *ngFor="let user of users">
+        <p>{{user.username}}</p>
+        <p>{{user.name}}</p>
+        <p>{{user.email}}</p>
+        <p>{{user.address.city}}</p>
+        <p>Jackson</p>
+        <p>94</p>
+        <p>{{user.posts.length}}</p>
+        <p>{{user.albuns.length}}</p>
+        <p>{{user.photos.length}}</p>
+      </li>
+    </ul> -->
+
+
+
+
   </div>
 </section>
 

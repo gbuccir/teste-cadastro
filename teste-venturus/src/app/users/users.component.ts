@@ -27,19 +27,18 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
     this.buscarPosts();
     this.buscarAlbuns();
-    // this.buscarPhotos();
-    // this.buscarUsers();
   }
 
   filterFunction() {
-
-
     if (this.pesquisa !== '')
       this.users = this.users.filter(i => i.name.includes(this.pesquisa) || i.username.includes(this.pesquisa));
     else
       this.users = this.usersAux;
   }
 
+  removerElemento(usuario){
+    // this.this.users.find(user => user.id === usuario.id)
+  }
 
 
   buscarUsers() {
@@ -57,7 +56,7 @@ export class UsersComponent implements OnInit {
           element.photos = this.photos.filter(photo => photo.albumId == alb.id);
         });
       });
-console.log(this.users);
+      console.log(this.users);
     },
       err => {
         console.log(err);

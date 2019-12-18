@@ -7,8 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UsersComponent } from './users/users.component';
 import { RegistrationComponent } from './users/registration/registration.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    FormsModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

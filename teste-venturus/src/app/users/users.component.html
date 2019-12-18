@@ -24,7 +24,7 @@
   <div class="usersHeader">
     <h3>Users</h3>
     <hr>
-    <input type="search" placeholder="Filter table content" />
+    <input type="text" [(ngModel)]="this.pesquisa" (ngModelChange)="filterFunction()" placeholder="&#128269; Filter table content" />
   </div>
 
   <div class="usersTable">
@@ -40,7 +40,7 @@
         <th>Albums</th>
         <th>Photos</th>
       </tr>
-      <tr *ngFor="let user of users; ">
+      <tr *ngFor="let user of users">
         <td>{{user.username}}</td>
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>

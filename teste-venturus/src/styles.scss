@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+// $floatLeft: left ;
+// $floatRight: right ;
+// $displayF: flex;
+// $verdePadrao: '';
+// $verdeIcon: '';
+
+.alinhaCentro{
+    display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.alinhaEsquerda{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}

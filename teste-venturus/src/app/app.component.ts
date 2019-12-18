@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faQuestion, faAngleDown,faHome, faPuzzlePiece, faTrophy, faMapSigns } from '@fortawesome/free-solid-svg-icons';
+import { faQuestion, faAngleDown} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -9,10 +9,8 @@ import { faQuestion, faAngleDown,faHome, faPuzzlePiece, faTrophy, faMapSigns } f
 })
 export class AppComponent {
   title = 'teste-venturus';
+
+  //icons fontawesome
   faQuestion = faQuestion;
   faAngleDown = faAngleDown;
-  faHome = faHome;
-  faPuzzlePiece=faPuzzlePiece;
-  faTrophy=faTrophy;
-  faMapSigns=faMapSigns
 }

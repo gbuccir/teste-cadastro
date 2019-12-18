@@ -36,8 +36,11 @@ export class UsersComponent implements OnInit {
       this.users = this.usersAux;
   }
 
-  removerElemento(usuario){
-    // this.this.users.find(user => user.id === usuario.id)
+  removerElemento(usuario) {
+    var r = confirm("Press a button!");
+    if (r == true) {
+      // this.this.users.find(user => user.id === usuario.id)
+    }
   }
 
 

@@ -56,10 +56,10 @@ tr:nth-child(odd):not(:first-of-type){
     background-color: #eaeaea;
 }
 
-td.tdLixeira{
+.tdLixeira{
     visibility: hidden;
 }
-tr:hover > .tdLixeira{
+tr:hover .tdLixeira{
     visibility: visible;
     cursor: pointer;
 }

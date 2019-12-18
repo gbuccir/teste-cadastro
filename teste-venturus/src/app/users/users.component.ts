@@ -1,7 +1,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { faHome, faPuzzlePiece, faTrophy, faMapSigns } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPuzzlePiece, faTrophy, faMapSigns, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -17,6 +17,7 @@ export class UsersComponent implements OnInit {
   faPuzzlePiece = faPuzzlePiece;
   faTrophy = faTrophy;
   faMapSigns = faMapSigns;
+  faTrashAlt=faTrashAlt;
   public users;
   public albuns;
   public photos;

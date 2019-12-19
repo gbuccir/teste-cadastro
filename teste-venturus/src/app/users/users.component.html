@@ -2,7 +2,8 @@
   <div class="componentHeader">
     <h3>Users</h3>
     <hr>
-    <input type="text" [(ngModel)]="this.pesquisa" (ngModelChange)="filterFunction()" class="pesquisa" placeholder="&#9906; Filter table content" />
+    <input type="text" [(ngModel)]="this.pesquisa" (ngModelChange)="filterFunction()" class="pesquisa"
+      placeholder="&#9906; Filter table content" />
   </div>
 
   <div class="usersTable">
@@ -29,7 +30,9 @@
         <td>{{user.posts.length}}</td>
         <td>{{user.albuns.length}}</td>
         <td>{{user.photos.length}}</td>
-        <td class="" (click)="removerElemento(user)"><fa-icon class="tdLixeira" [icon]="faTrashAlt"></fa-icon></td>
+        <td class="" (click)="removerElemento(user)">
+          <fa-icon class="tdLixeira" [icon]="faTrashAlt"></fa-icon>
+        </td>
       </tr>
     </table>
 
@@ -59,7 +62,7 @@
     </ul> -->
 
 
-
+    <a href="/users/new">new user</a>
 
   </div>
 </section>

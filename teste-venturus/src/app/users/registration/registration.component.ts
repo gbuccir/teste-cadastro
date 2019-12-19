@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faLifeRing, faHeartbeat, faSmile } from '@fortawesome/free-solid-svg-icons';
 import { UserserviceService } from 'src/app/service/userservice.service';
 import { Users } from 'src/app/classes/users';
 import { Days } from 'src/app/enum/days.enum';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { Days } from 'src/app/enum/days.enum';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private usersService: UserserviceService) { }
+  constructor(private usersService: UserserviceService, private route:Router) { }
 
   faLifeRing = faLifeRing;
   faHeartbeat = faHeartbeat;
@@ -21,10 +22,15 @@ export class RegistrationComponent implements OnInit {
   public daysEnum = Days;
   public novoRegistro = new Users();
   public sunday; saturday; friday; wednesday; tuesday; monday; thursday;
+  public mostraAJuda = false;
 
   ngOnInit() {
+    console.log(this.novoRegistro)
     this.novoRegistro.days = [];
   }
+
+  // @Output()
+  // listarUsuarios = new EventEmitter<any>();
 
   saveRegistro() {
     try {
@@ -40,12 +46,17 @@ export class RegistrationComponent implements OnInit {
         throw "Choose the group ride";
       if (this.novoRegistro.days.length <= 0)
         throw "Choose the days";
-      if (this.usersService.nullOrUndefOrEmpty(this.novoRegistro.city))
-        this.novoRegistro.city = "";
+      if (this.usersService.nullOrUndefOrEmpty(this.novoRegistro.address.city))
+        this.novoRegistro.address.city = "";
+
+        this.novoRegistro.posts = 0;
+        this.novoRegistro.albuns = 0;
+        this.novoRegistro.photos = 0;
 
       var r = confirm("Save user?");
       if (r) {
         this.usersService.setNewUser(this.novoRegistro);
+        this.route.navigate(["/users"]);
       }
 
     } catch (e) {

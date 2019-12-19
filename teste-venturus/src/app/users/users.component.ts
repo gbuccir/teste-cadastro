@@ -3,6 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faHome, faPuzzlePiece, faTrophy, faMapSigns, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
+import { UserserviceService } from '../service/userservice.service';
 
 @Component({
   selector: 'app-users',
@@ -11,13 +12,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private userService: UserserviceService) { }
 
   faHome = faHome
   faPuzzlePiece = faPuzzlePiece;
   faTrophy = faTrophy;
   faMapSigns = faMapSigns;
-  faTrashAlt=faTrashAlt;
+  faTrashAlt = faTrashAlt;
   public users;
   public albuns;
   public photos;
@@ -40,8 +41,8 @@ export class UsersComponent implements OnInit {
   removerElemento(usuario) {
     var r = confirm("Delete user?");
     if (r == true) {
-       let user = this.users.find(user => user.id === usuario.id);
-       this.users.splice(this.users.indexOf(user),1)
+      let user = this.users.find(user => user.id === usuario.id);
+      this.users.splice(this.users.indexOf(user), 1)
     }
   }
 
@@ -61,6 +62,12 @@ export class UsersComponent implements OnInit {
           element.photos = this.photos.filter(photo => photo.albumId == alb.id);
         });
       });
+
+      let novoUser = this.userService.getNewUser();
+
+      if (!this.userService.nullOrUndef(novoUser))
+        this.users.push(novoUser);
+
       console.log(this.users);
     },
       err => {

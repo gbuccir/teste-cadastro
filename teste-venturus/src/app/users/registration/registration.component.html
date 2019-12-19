@@ -35,9 +35,9 @@
         <div>
           <label>Username</label>
           <br>
-          <input type="text" name="username" [(ngModel)]="novoRegistro.username" />
+          <input type="text" (focus)="mostraAJuda = true" (blur)="mostraAJuda = false" name="username" [(ngModel)]="novoRegistro.username" />
           <br>
-          <span>Instructions to show on input focus</span>
+          <span *ngIf="mostraAJuda">Instructions to show on input focus</span>
         </div>
 
         <div>
@@ -60,7 +60,7 @@
           <label>City</label>
           <span class=opcional>Optional</span>
           <br>
-          <input type="text" name="city" [(ngModel)]="novoRegistro.city" />
+          <input type="text" name="city" [(ngModel)]="novoRegistro.address.city" />
         </div>
 
         <div>

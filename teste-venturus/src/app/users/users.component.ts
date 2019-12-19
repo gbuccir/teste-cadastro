@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
 import { faHome, faPuzzlePiece, faTrophy, faMapSigns, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 import { UserserviceService } from '../service/userservice.service';
+import { GroupRide } from '../enum/group-ride.enum';
+import { Days } from '../enum/days.enum';
 
 @Component({
   selector: 'app-users',
@@ -53,6 +55,10 @@ export class UsersComponent implements OnInit {
       this.usersAux = this.users;
       console.log(this.users);
 
+      let novoUser = this.userService.getNewUser();
+      if (!this.userService.nullOrUndef(novoUser))
+        this.users.push(novoUser);
+
       this.users.forEach(element => {
 
         element.posts = this.posts.filter(post => post.userId == element.id);
@@ -61,12 +67,13 @@ export class UsersComponent implements OnInit {
         this.albuns.forEach(alb => {
           element.photos = this.photos.filter(photo => photo.albumId == alb.id);
         });
+
+        element.group = this.buscarGroup(element.group);
+        element.days = this.buscarDays(element.days);
       });
 
-      let novoUser = this.userService.getNewUser();
 
-      if (!this.userService.nullOrUndef(novoUser))
-        this.users.push(novoUser);
+
 
       console.log(this.users);
     },
@@ -136,5 +143,69 @@ export class UsersComponent implements OnInit {
     //   })
   }
 
+  buscarGroup(userGroup) {
+    let num = null;
+
+    if (this.userService.nullOrUndefOrEmpty(userGroup)) {
+      num = Math.floor(Math.random() * 3);
+    }
+    else
+      num = userGroup;
+
+    let txt = "";
+    if (num == GroupRide.Always)
+      txt = "always";
+    else if (num == GroupRide.Sometimes)
+      txt = "sometimes";
+    else
+      txt = "never";
+
+    return txt;
+  }
+
+  buscarDays(days) {
+    let num = [];
+    let txt = "";
+    if (this.userService.nullOrUndefOrEmpty(days)) {
+      num.push(Math.floor(Math.random() * 7));
+    }
+    else
+      num = days;
+
+    for (let i = 0; i < num.length; i++) {
+      switch (num[i]) {
+        case Days.Sunday: {
+          txt += "Sun,"
+          break;
+        }
+        case Days.Monday: {
+          txt += "Mon,"
+          break;
+        }
+        case Days.Tuesday: {
+          txt += "Tue,"
+          break;
+        }
+        case Days.Wednesday: {
+          txt += "Wed,"
+          break;
+        }
+        case Days.Thursday: {
+          txt += "Thu,"
+          break;
+        }
+        case Days.Friday: {
+          txt += "Fri,"
+          break;
+        }
+        case Days.Saturday: {
+          txt += "Sat,"
+          break;
+        }
+      }
+
+    }
+    return txt;
+  }
 
 }

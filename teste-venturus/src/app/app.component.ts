@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faQuestion, faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPuzzlePiece, faTrophy, faMapSigns, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,4 +14,10 @@ export class AppComponent {
   //icons fontawesome
   faQuestion = faQuestion;
   faAngleDown = faAngleDown;
+  
+  faHome = faHome
+  faPuzzlePiece = faPuzzlePiece;
+  faTrophy = faTrophy;
+  faMapSigns = faMapSigns;
+  faTrashAlt=faTrashAlt;
 }

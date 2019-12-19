@@ -1,0 +1,96 @@
+.registrationHeader{
+height: 65px;
+}
+
+.registrationHeader hr{
+width: calc(100% - 150px);
+margin: 20px 10px 0 0;
+
+}
+
+.help{
+    width: 100%;
+    height: 100px;
+}
+
+.help > div{
+    width: 33%;
+    float: left;
+}
+
+.help > div p{
+    width: 75%;
+    margin: auto;
+    font-size: 12px;
+    float: left;
+    margin: 0 13px
+}
+
+.iconHelp{
+float: left;
+font-size: 42px;
+}
+
+.separaForm,
+.formRegistration{
+ width: 75%;   
+ margin: 40px auto;
+}
+
+.formRegistration *{
+    font-size: 12px;
+}
+
+.formRegistration section{
+    width: 50%;
+height: 250px;
+}
+
+.formRegistration section div{
+margin: 15px 0;
+height: 55px;
+}
+
+.formRegistration section div input[type="text"]{
+    width: 90%;
+
+}
+
+.formRegistration section div input{
+    height: 20px;
+    
+}
+
+.esq{
+    float: left;
+}
+
+.dir{
+float: right;
+}
+
+// .formRegistration > div{
+//     display: inline-block;
+//     width: 50%;
+// }
+
+// .formRegistration > div input[type="text"]{
+//     width: 300px;
+// }
+
+// .formRegistration > div input{
+//     height: 20px;
+// }
+
+// .formRegistration > div:nth-of-type(odd){
+//     float: left;
+// }
+
+// .formRegistration > div:nth-of-type(even){
+//     float: right;
+// }
+
+.opcional{
+float: right;
+margin: 0 10px 0px 0;
+}

@@ -16,3 +16,17 @@ flex-direction: column;
     justify-content: flex-start;
     width: 100%;
 }
+
+.componentHeader h3 {
+    float: left;
+        }
+    
+        .componentHeader > hr{
+            float: left;
+    width:calc(100% - 260px);
+    margin: 20px;
+        }
+    
+        .componentHeader input {
+            float: right;
+                }

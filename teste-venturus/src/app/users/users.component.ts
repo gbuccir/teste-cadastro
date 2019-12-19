@@ -38,7 +38,7 @@ export class UsersComponent implements OnInit {
   }
 
   removerElemento(usuario) {
-    var r = confirm("Deseja excluir este ususário?");
+    var r = confirm("Delete user?");
     if (r == true) {
        let user = this.users.find(user => user.id === usuario.id);
        this.users.splice(this.users.indexOf(user),1)

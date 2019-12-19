@@ -1,3 +1,108 @@
-<p>
-  registration works!
-</p>
+<section>
+  <div class="componentHeader registrationHeader">
+    <h3>Registration</h3>
+    <hr>
+  </div>
+  <div class="help">
+    <div>
+      <h3>Need help?</h3>
+      <fa-icon class="iconHelp" [icon]="faLifeRing"></fa-icon>
+      <p>Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+      <h3>Why register?</h3>
+      <fa-icon class="iconHelp" [icon]="faHeartbeat"></fa-icon>
+      <p>Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+      <h3>What people are saying...</h3>
+      <fa-icon class="iconHelp" [icon]="faSmile"></fa-icon>
+      <p>Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+
+  <hr class="separaForm" />
+
+  <div>
+    <form class="formRegistration">
+      <section class="esq">
+        <div>
+          <label>Username</label>
+          <br>
+          <input type="text" name="username" [(ngModel)]="novoRegistro.username" />
+          <br>
+          <span>Instructions to show on input focus</span>
+        </div>
+
+        <div>
+          <label>Name</label>
+          <br>
+          <input type="text" name="name" [(ngModel)]="novoRegistro.name" />
+          <br>
+        </div>
+
+        <div>
+          <label>E-mail</label>
+          <br>
+          <input type="text" name="email" [(ngModel)]="novoRegistro.email"/>
+          <br>
+        </div>
+      </section>
+      
+      <section class="dir">
+        <div>
+          <label>City</label>
+          <span class=opcional>Optional</span>
+          <br>
+          <input type="text" name="city" [(ngModel)]="novoRegistro.city" />
+        </div>
+
+        <div>
+          <label>Ride in group?</label>
+          <br>
+          <input type="radio" name="always" [(ngModel)]="novoRegistro.group" [value]="1" />
+          <label>Always</label>
+          <input type="radio" name="sometimes" [(ngModel)]="novoRegistro.group" [value]="2"/>
+          <label>Sometimes</label>
+          <input type="radio" name="never" [(ngModel)]="novoRegistro.group" [value]="3"/>
+          <label>Never</label>
+          <br>
+        </div>
+
+        <div>
+          <label>Days of the week</label>
+          <br>
+          <!-- <input type="checkbox" name="sun" [(ngModel)]="novoRegistro.days" value="daysEnum.Sunday"/> -->
+          <input type="checkbox" name="sun" [(ngModel)]="sunday" (change)="marcaDia(daysEnum.Sunday ,sunday)"/>
+          <label>Sun</label>
+          <input type="checkbox" name="mon" [(ngModel)]="monday" (change)="marcaDia(daysEnum.Monday ,monday)"/>
+          <label>Mon</label>
+          <input type="checkbox" name="tue" [(ngModel)]="tuesday" (change)="marcaDia(daysEnum.Tuesday ,tuesday)"/>
+          <label>Tue</label>
+          <input type="checkbox" name="wed" [(ngModel)]="wednesday" (change)="marcaDia(daysEnum.Wednesday ,wednesday)"/>
+          <label>Wed</label>
+          <input type="checkbox" name="thu" [(ngModel)]="thursday" (change)="marcaDia(daysEnum.Thursday ,thursday)"/>
+          <label>Thu</label>
+          <input type="checkbox" name="fry" [(ngModel)]="friday" (change)="marcaDia(daysEnum.Friday ,friday)"/>
+          <label>Fry</label>
+          <input type="checkbox" name="sat" [(ngModel)]="saturday" (change)="marcaDia(daysEnum.Saturday ,saturday)"/>
+          <label>Sat</label>
+          <br>
+        </div>
+      </section>
+
+    
+
+
+<button (click)="saveRegistro()">Save</button>
+<button (click)="discardRegistro()">Discard</button>
+
+    </form>
+  </div>
+</section>

@@ -1,26 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header>
   <div class="fundoInterrogacao alinhaCentro">
-    <fa-icon [icon]="faQuestion"></fa-icon>
+    <fa-icon [icon]="faQuestion" class="iconInterroga"></fa-icon>
   </div>
-  <h3>Venturus Sports</h3>
-  <div class="alinhaCentro">
-      <div>
-        <a title="Jason Bourne">JB</a>
-      </div>
-      <label>Jason Bourne</label>
-      <fa-icon [icon]="faAngleDown"></fa-icon>
+  <h4>Venturus Sports</h4>
+  <div class="alinhaCentro fundoDD" >
+    <div class="imgUser">
+      <a title="Jason Bourne">JB</a>
+    </div>
+    <div class="dropDown">
+      <select class="">
+        <option>Jason Bourne</option>
+        <option>Friends List</option>
+        <option>Saved Items</option>
+        <option>Notifications</option>
+        <option>User preferences</option>
+        <option>Log out</option>
+      </select>
+    </div>
+    <!-- <label>Jason Bourne</label>
+      <fa-icon [icon]="faAngleDown"></fa-icon> -->
   </div>
 </header>
 <section class="subHeader alinhaEsquerda">
   <fa-icon [icon]="faHome" class="alinhaCentro"></fa-icon>
   <!-- rota -->
-  <ul class="breadcrumb">
+  <ul class="breadcrumb alinhaCentro">
     <li><a href="/users">Users</a></li>
-    <!-- <a [routerLink]="[route.breadcrumb.url, breadcrumb.params]"></a> -->
-    <li><a href="/users/new" *ngIf="route.url == '/users/new'">New</a></li>
+    <li><a href="/users/new" *ngIf="route.url == '/users/new'">> &nbsp;&nbsp; New</a></li>
   </ul>
 </section>
+
 <section class="Sports">
   <div class="infoSports">
     <fa-icon [icon]="faPuzzlePiece"></fa-icon>

@@ -2,8 +2,31 @@
 // $floatLeft: left ;
 // $floatRight: right ;
 // $displayF: flex;
-// $verdePadrao: '';
-// $verdeIcon: '';
+ $verdeTxt: rgb(26,188,156);
+ $verdeIcon: rgb(59,197,170);
+ $verdeFundo:rgb(187,235,226);
+ $cinzaFundo: rgb(249,249,249);
+ $cinzaHover: rgb(227,227,227);
+
+ *{
+    font-family: arial;
+    outline: none;
+ }
+
+ ul{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    color: rgb(241,241,241);
+    border: 1px solid;
+    background-color: rgb(241,241,241);
+    
+}
 
 .alinhaCentro{
     display: flex;

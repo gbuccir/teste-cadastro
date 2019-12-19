@@ -14,7 +14,8 @@ Foi adicionado Font Awesome 5 utilizando o npm. Seguem os comandos de instalaç�
 
 - npm install @fortawesome/angular-fontawesome@0.3.x
 
-O comando que abre no browser é ng serve -o.
+O comando que abre no browser é:
+- ng serve -o.
 
 # Desenvolvimento
 

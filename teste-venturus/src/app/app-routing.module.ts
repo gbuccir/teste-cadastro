@@ -7,6 +7,8 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersComponent,
+    data: { breadcrumb: 'Users' },
+
     // children: [
     //   {
     //     path: 'new',
@@ -16,7 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'users/new',
-    component: RegistrationComponent
+    component: RegistrationComponent,
+    data: { breadcrumb: 'New' },
+
   },
   {
     path: '',

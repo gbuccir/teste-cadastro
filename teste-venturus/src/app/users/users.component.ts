@@ -92,15 +92,7 @@ export class UsersComponent implements OnInit {
       console.log("nao chamaou api");
       retorno = false;
     }
-    // this.http.get("https://jsonplaceholder.typicode.com/photos").subscribe(data => {
-    //   this.photos = data;
-    //   // this.users.photos = this.photos.filter( photo => )
-    //   console.log("photos");
-    //   console.log(this.photos);
-    // },
-    // err => {
-    //   console.log(err);
-    // })
+   
   }
 
   async buscarAlbuns() {
@@ -113,15 +105,7 @@ export class UsersComponent implements OnInit {
       console.log("nao chamaou api");
       retorno = false;
     }
-    //    this.http.get("https://jsonplaceholder.typicode.com/albums").subscribe(data => {
-    //   this.albuns = data;
-    //   console.log("albuns");
-
-    //   console.log(this.albuns);
-    // },
-    //   err => {
-    //     console.log(err);
-    //   })
+ 
   }
 
   async buscarPosts() {
@@ -133,14 +117,7 @@ export class UsersComponent implements OnInit {
       console.log("nao chamaou api");
       retorno = false;
     }
-    // this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe(data => {
-    //   this.posts = data;
-    //   console.log("posts");
-    //   console.log(this.posts);
-    // },
-    //   err => {
-    //     console.log(err);
-    //   })
+    
   }
 
   buscarGroup(userGroup) {

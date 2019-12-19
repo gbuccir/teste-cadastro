@@ -25,8 +25,9 @@ export class RegistrationComponent implements OnInit {
   public mostraAJuda = false;
 
   ngOnInit() {
-    console.log(this.novoRegistro)
     this.novoRegistro.days = [];
+
+    console.log(this.route.url)
   }
 
   // @Output()

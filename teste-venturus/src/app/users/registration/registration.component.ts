@@ -30,7 +30,7 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
     this.novoRegistro.days = [];
 
-    console.log(this.route.url)
+    // console.log(this.route.url)
   }
 
   // @Output()
@@ -44,8 +44,8 @@ export class RegistrationComponent implements OnInit {
         throw "Fill name field";
       if (this.usersService.nullOrUndefOrEmpty(this.novoRegistro.email))
         throw "Fill e-mail field";
-      if (this.usersService.nullOrUndefOrEmpty(this.novoRegistro.email))
-        throw "Fill e-mail field";
+      if (!this.usersService.validateEmail(this.novoRegistro.email))
+        throw "Invalid e-mail";
       if (this.usersService.nullOrUndefOrEmpty(this.novoRegistro.group))
         throw "Choose the group ride";
       if (this.novoRegistro.days.length <= 0)
@@ -81,6 +81,8 @@ export class RegistrationComponent implements OnInit {
 
   discardRegistro() {
     this.novoRegistro = new Users();
+    this.novoRegistro.days = [];
+
   }
 
 }

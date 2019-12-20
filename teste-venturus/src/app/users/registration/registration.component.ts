@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { faLifeRing, faHeartbeat, faSmile } from '@fortawesome/free-solid-svg-icons';
+ import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import { faLifeRing, faSmile } from '@fortawesome/free-regular-svg-icons';
+
+
 import { UserserviceService } from 'src/app/service/userservice.service';
 import { Users } from 'src/app/classes/users';
 import { Days } from 'src/app/enum/days.enum';

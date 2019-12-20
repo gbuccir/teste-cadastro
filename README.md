@@ -12,6 +12,8 @@ Foi adicionado Font Awesome 5 utilizando o npm. Seguem os comandos de instalaç�
 
 - npm install @fortawesome/free-solid-svg-icons
 
+- npm install @fortawesome/free-regular-svg-icons
+
 - npm install @fortawesome/angular-fontawesome@0.3.x
 
 O comando que abre no browser é:

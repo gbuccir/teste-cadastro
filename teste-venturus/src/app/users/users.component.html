@@ -8,32 +8,36 @@
 
   <div class="usersTable">
     <table style="width:100%">
-      <tr>
-        <th>Username</th>
-        <th>Name</th>
-        <th>E-mail</th>
-        <th>City</th>
-        <th>Ride in group</th>
-        <th>Day of the week</th>
-        <th>Post</th>
-        <th>Albums</th>
-        <th>Photos</th>
-        <th>&nbsp;</th>
-      </tr>
-      <tr *ngFor="let user of users">
-        <td>{{user.username}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.address.city}}</td>
-        <td>{{user.group}}</td>
-        <td>{{user.days}}</td>
-        <td>{{user.posts.length}}</td>
-        <td>{{user.albuns.length}}</td>
-        <td>{{user.photos.length}}</td>
-        <td class="" (click)="removerElemento(user)">
-          <fa-icon class="tdLixeira" [icon]="faTrashAlt"></fa-icon>
-        </td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>City</th>
+          <th>Ride in group</th>
+          <th>Day of the week</th>
+          <th>Post</th>
+          <th>Albums</th>
+          <th>Photos</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.username}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.address.city}}</td>
+          <td>{{user.group}}</td>
+          <td>{{user.days}}</td>
+          <td>{{user.posts.length}}</td>
+          <td>{{user.albuns.length}}</td>
+          <td>{{user.photos.length}}</td>
+          <td class="" (click)="removerElemento(user)">
+            <fa-icon class="tdLixeira" [icon]="faTrashAlt"></fa-icon>
+          </td>
+        </tr>
+      </tbody>
     </table>
 
     <!-- <ul style="width:100%">

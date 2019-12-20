@@ -35,7 +35,8 @@
         <div>
           <label>Username</label>
           <br>
-          <input type="text" (focus)="mostraAJuda = true" (blur)="mostraAJuda = false" name="username" [(ngModel)]="novoRegistro.username" />
+          <input type="text" (focus)="mostraAJuda = true" (blur)="mostraAJuda = false" name="username"
+            [(ngModel)]="novoRegistro.username" />
           <br>
           <span *ngIf="mostraAJuda">Instructions to show on input focus</span>
         </div>
@@ -50,14 +51,14 @@
         <div>
           <label>E-mail</label>
           <br>
-          <input type="text" name="email" [(ngModel)]="novoRegistro.email"/>
+          <input type="text" name="email" [(ngModel)]="novoRegistro.email" />
           <br>
         </div>
       </section>
-      
+
       <section class="dir">
         <div>
-          <label>City</label>
+          <label class="inputOpcional">City</label>
           <span class=opcional>Optional</span>
           <br>
           <input type="text" name="city" [(ngModel)]="novoRegistro.address.city" />
@@ -66,12 +67,23 @@
         <div>
           <label>Ride in group?</label>
           <br>
-          <input type="radio" name="always" [(ngModel)]="novoRegistro.group" [value]="1" />
-          <label>Always</label>
-          <input type="radio" name="sometimes" [(ngModel)]="novoRegistro.group" [value]="2"/>
-          <label>Sometimes</label>
-          <input type="radio" name="never" [(ngModel)]="novoRegistro.group" [value]="3"/>
-          <label>Never</label>
+
+          <label class="container">Always
+            <input type="radio" name="always" [(ngModel)]="novoRegistro.group" [value]="1" />
+            <span class="checkmark typeRadio"></span>
+          </label>
+
+          <label class="container">Sometimes
+            <input type="radio" name="sometimes" [(ngModel)]="novoRegistro.group" [value]="2" />
+            <span class="checkmark typeRadio"></span>
+          </label>
+
+
+          <label class="container">Never
+            <input type="radio" name="never" [(ngModel)]="novoRegistro.group" [value]="3" />
+            <span class="checkmark typeRadio"></span>
+          </label>
+
           <br>
         </div>
 
@@ -79,29 +91,48 @@
           <label>Days of the week</label>
           <br>
           <!-- <input type="checkbox" name="sun" [(ngModel)]="novoRegistro.days" value="daysEnum.Sunday"/> -->
-          <input type="checkbox" name="sun" [(ngModel)]="sunday" (change)="marcaDia(daysEnum.Sunday ,sunday)"/>
-          <label>Sun</label>
-          <input type="checkbox" name="mon" [(ngModel)]="monday" (change)="marcaDia(daysEnum.Monday ,monday)"/>
-          <label>Mon</label>
-          <input type="checkbox" name="tue" [(ngModel)]="tuesday" (change)="marcaDia(daysEnum.Tuesday ,tuesday)"/>
-          <label>Tue</label>
-          <input type="checkbox" name="wed" [(ngModel)]="wednesday" (change)="marcaDia(daysEnum.Wednesday ,wednesday)"/>
-          <label>Wed</label>
-          <input type="checkbox" name="thu" [(ngModel)]="thursday" (change)="marcaDia(daysEnum.Thursday ,thursday)"/>
-          <label>Thu</label>
-          <input type="checkbox" name="fry" [(ngModel)]="friday" (change)="marcaDia(daysEnum.Friday ,friday)"/>
-          <label>Fry</label>
-          <input type="checkbox" name="sat" [(ngModel)]="saturday" (change)="marcaDia(daysEnum.Saturday ,saturday)"/>
-          <label>Sat</label>
+          <label class="container">Sun
+            <input type="checkbox" name="sun" [(ngModel)]="sunday" (change)="marcaDia(daysEnum.Sunday ,sunday)" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Mon
+            <input type="checkbox" name="mon" [(ngModel)]="monday" (change)="marcaDia(daysEnum.Monday ,monday)" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Tue
+            <input type="checkbox" name="tue" [(ngModel)]="tuesday" (change)="marcaDia(daysEnum.Tuesday ,tuesday)" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Wed
+            <input type="checkbox" name="wed" [(ngModel)]="wednesday"
+              (change)="marcaDia(daysEnum.Wednesday ,wednesday)" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Thu
+            <input type="checkbox" name="thu" [(ngModel)]="thursday" (change)="marcaDia(daysEnum.Thursday ,thursday)" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Fry
+            <input type="checkbox" name="fry" [(ngModel)]="friday" (change)="marcaDia(daysEnum.Friday ,friday)" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Sat
+            <input type="checkbox" name="sat" [(ngModel)]="saturday" (change)="marcaDia(daysEnum.Saturday ,saturday)" />
+            <span class="checkmark"></span>
+          </label>
+
           <br>
         </div>
       </section>
 
-    
-
-
-<button (click)="saveRegistro()">Save</button>
-<button (click)="discardRegistro()">Discard</button>
+      <button class="btnSave" (click)="saveRegistro()">Save</button>
+      <button class="btnDiscard" (click)="discardRegistro()">Discard</button>
 
     </form>
   </div>
